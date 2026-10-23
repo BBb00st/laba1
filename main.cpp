@@ -37,7 +37,7 @@ int main() {
 
     // СПОСІБ 1: Запис як текстова інформація
     ofstream textFile("student_text.txt");
-    if (textFile.is (http://textFile.is/)_open()) {
+    if (textFile.is_open()) {
         textFile << "--- ДАНІ СТУДЕНТА (ТЕКСТОВИЙ РЕЖИМ) ---\n";
         textFile << "Прізвище: " << stud.lastName << "\n";
         textFile << "Ім'я: " << stud.firstName << "\n";
@@ -59,7 +59,7 @@ int main() {
 
     // СПОСІБ 2: Запис у вигляді двійкової структури
     ofstream binFile("student_struct.bin", ios::binary);
-    if (binFile.is (http://binFile.is/)_open()) {
+    if (binFile.is_open()) {
         binFile.write(reinterpret_cast<char*>(&stud), sizeof(Student));
         binFile.close();
         cout << "Спосiб 2: Бінарний файл 'student_struct.bin' успiшно оновлено.\n";
